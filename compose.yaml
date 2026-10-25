@@ -1,0 +1,9 @@
+services:
+  bot:
+    build: .
+    env_file: .env
+    restart: unless-stopped
+    volumes:
+      - jobicy-data:/app/data
+volumes:
+  jobicy-data:
